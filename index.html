@@ -140,7 +140,9 @@
                 
                 <h4 class="text-xl font-semibold mb-3 text-white">Professional Summary</h4>
                 <p class="text-gray-400 leading-relaxed text-base">
-                    Highly motivated <B>Computer Science undergraduate</B>with a strong foundation in Software Development Life Cycle (SDLC)and Data Structures & Algorithms (DSA). Proven ability to deliver results in full-stack projects, specializing in Java and web technologies. Seeking a challenging role to contribute to innovative tech solutions in an Agile environment.
+                    Highly motivated <B>Computer Science undergraduate</B>with a strong foundation in Software Development Life Cycle (SDLC)and 
+                    Data Structures & Algorithms (DSA). Proven ability to deliver results in full-stack projects, 
+                    specializing in Java and web technologies. Seeking a challenging role to contribute to innovative tech solutions in an Agile environment.
                 </p>
             </section>
 
@@ -240,35 +242,75 @@
                 <h3 class="text-3xl font-extrabold accent-text mb-6 border-b-4 border-sky-600 pb-3 uppercase tracking-wider">SIGNIFICANT PROJECTS</h3>
                 <div class="space-y-10">
                     
-                    <div class="project-highlight pl-5 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-900/60 transition duration-300">
-                        <h4 class="text-xl font-bold text-white">Museum Ticket Booking Chatbot (AI/DB)</h4>
-                        <p class="text-sm text-sky-400 font-mono mt-1 mb-3">**Technologies:** Dialogflow, Oracle DB, QR Verification, Google Maps API</p>
-                        <ul class="list-disc ml-5 text-gray-400 space-y-2">
-                            <li>Developed a robust, multilingual chatbot using **Dialogflow** for natural language understanding to automate ticket sales.</li>
-                            <li>Integrated **Oracle DB** to manage ticket inventory, secure customer transactions, and handle real-time bookings.</li>
-                            <li>Designed and implemented a secure **QR-based verification** system, reducing visitor entry time by **30%**.</li>
-                        </ul>
-                        <a href="#" class="text-sky-400 hover:text-sky-300 font-medium mt-3 inline-flex items-center transition group">
-                            <i data-lucide="code-square" class="w-4 h-4 mr-1 group-hover:scale-110 transition"></i> View Source Code
-                        </a>
-                    </div>
+                   <div class="project-highlight pl-5 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-900/60 transition duration-300">
+    <h4 class="text-xl font-bold text-white">Museum Ticket Booking Chatbot (AI/DB)</h4>
+    <p class="text-sm text-sky-400 font-mono mt-1 mb-3">Technologies: Dialogflow, Oracle DB, Python, QR Verification, Google Maps API</p>
+    
+    <ul class="list-disc ml-5 text-gray-400 space-y-2">
+        <li>
+            Developed a robust, multilingual chatbot using Dialogflow for Natural Language Understanding (NLU), creating 25+ custom intents and entities to automate ticket sales and address common visitor FAQs, ensuring a smooth conversational flow.
+        </li>
+        <li>
+            Integrated Oracle DB via secure middleware to manage ticket inventory, process customer transactions reliably, and handle real-time bookings, maintaining ACID properties for data integrity.
+        </li>
+        <li>
+            Implemented a secure QR-based verification system using Python , which generated unique encrypted QR codes for each ticket. This system successfully reduced visitor entry time by 30% and minimized fraudulent entries.
+        </li>
+        <li>
+            Utilized the Google Maps API to provide dynamic directions, operating hours, and proximity information directly within the chat interface, significantly enhancing the user experience.
+        </li>
+        <li>
+            Configured Tomcat Apache server-side to connect Dialogflow with a backend service, enabling complex business logic execution (like checking ticket availability) before confirming a booking.
+        </li>
+        
+        <li class="pt-2">
+            <span class="font-semibold text-white">Tech Stack Breakdown:</span>
+            <ul class="list-circle ml-5 mt-1 text-gray-400 space-y-1">
+                <li>Front-end/Interface: Dialogflow Console (Chat UI Integration).</li>
+                <li>Back-end/Logic: Apache Tomcat (Hosted on a lightweight server).</li>
+                <li>Database: Oracle Database (Used SQL for complex query handling and transaction management).</li>
+                <li>Key Libraries: Utilized Python libraries for QR code generation (`qrcode`) and image processing for verification.</li>
+            </ul>
+        </li>
+        </ul>
+   
+</div>
 
-
-                    <div class="project-highlight pl-5 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-900/60 transition duration-300">
-                        <h4 class="text-xl font-bold text-white mt-4">Municipal Corporation Management System (Full Stack)</h4>
-                        <p class="text-sm text-sky-400 font-mono mt-1 mb-3">**Technologies:** HTML, CSS, JavaScript, Core Java (JDBC), MySQL</p>
-                        <ul class="list-disc ml-5 text-gray-400 space-y-2">
-                            <li>Engineered a centralized web application for municipal services and citizen records, enhancing administrative efficiency.</li>
-                            <li>Implemented the data layer using **Core Java (JDBC)** to securely interact with the **MySQL** database.</li>
-                            <li>Focused on **responsive UI/UX design** using standard web technologies, resulting in a user-friendly staff portal.</li>
-                        </ul>
-                        <a href="#" class="text-sky-400 hover:text-sky-300 font-medium mt-3 inline-flex items-center transition group">
-                            <i data-lucide="globe-lock" class="w-4 h-4 mr-1 group-hover:scale-110 transition"></i> View Live Demo
-                        </a>
-                    </div>
-                    
-                </div>
-            </section>
+ <div class="project-highlight pl-5 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-900/60 transition duration-300">
+    <h4 class="text-xl font-bold text-white mt-4">Municipal Corporation Management System (Full Stack)</h4>
+    <p class="text-sm text-sky-400 font-mono mt-1 mb-3">Technologies: HTML, CSS, Vanilla JavaScript, Core Java (JDBC), MySQL, JSP/Servlets (for server-side rendering)</p>
+    
+    <ul class="list-disc ml-5 text-gray-400 space-y-2">
+        <li>
+            Engineered a centralized web application to streamline municipal services and manage comprehensive citizen records (e.g., birth, death, property tax). The system's digital registry enhanced administrative efficiency by reducing manual data entry by 40%.
+        </li>
+        <li>
+            Implemented the robust data layer using **Core Java (JDBC) and JSP/Servlets to securely interact with the MySQL database. Developed 15+ reusable Java classes to handle object mapping and execute complex SQL queries for data retrieval and modification.
+        </li>
+        <li>
+            Focused on responsive UI/UX design using native HTML and CSS3 (Flexbox/Grid), ensuring the staff portal is fully accessible and operational across desktop and tablet devices.
+        </li>
+        <li>
+            Developed secure login and role-based access control mechanisms in Java to ensure only authorized municipal staff could view, edit, or delete sensitive citizen data, enhancing system security.
+        </li>
+        <li>
+            Designed and optimized the database schema in MySQL to support rapid querying and high-volume transaction processing for services like record issuance and status updates.
+        </li>
+        
+        <li class="pt-2">
+            <span class="font-semibold text-white">Tech Stack Breakdown:</span>
+            <ul class="list-circle ml-5 mt-1 text-gray-400 space-y-1">
+                <li>**Front-end: HTML5, CSS3, Vanilla JavaScript (for form validation and dynamic DOM manipulation).</li>
+                <li>**Back-end/Business Logic: Core Java, Servlets/JSP.</li>
+                <li>**Data Access: JDBC (Java Database Connectivity) for secure, parameterized query execution.</li>
+                <li>**Database: MySQL.</li>
+            </ul>
+        </li>
+        
+    </ul>
+  
+</div>
+ </section>
 
 
             <section class="section-card" id="experience">
@@ -278,11 +320,11 @@
 
                     <div class="border-l-4 border-sky-500 pl-5 pt-1 relative">
                         <h4 class="text-xl font-semibold text-white">Java Full Stack Intern</h4>
-                        <p class="text-md text-gray-400">DEV Technologies | <span class="text-sm font-light">May 2025 – Present (Ongoing)</span></p>
+                        <p class="text-md text-gray-400">DEV Technologies | <span class="text-sm font-light">Sep 2024 – August 2025</span></p>
                         <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
-                            <li>Developed and debugged **RESTful APIs** using **Java** and **Spring Boot**, supporting the core application logic for microservices.</li>
-                            <li>Gained hands-on experience in **UI/UX design** and implemented responsive front-end components using modern frameworks.</li>
-                            <li>Actively participated in the **Agile SDLC**, contributing to requirement analysis and deployment of functional modules.</li>
+                            <li>Developed and debugged RESTful APIs using Java and Spring Boot, supporting the core application logic for microservices.</li>
+                            <li>Gained hands-on experience in UI/UX design and implemented responsive front-end components using modern frameworks.</li>
+                            <li>Actively participated in the Agile SDLC, contributing to requirement analysis and deployment of functional modules.</li>
                         </ul>
                     </div>
 
@@ -291,9 +333,9 @@
                         <h4 class="text-xl font-semibold text-white">Web Development Intern</h4>
                         <p class="text-md text-gray-400">TechnoHacks Edutech Pvt. Ltd | <span class="text-sm font-light">Dec 2024 – Jan 2025</span></p>
                         <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
-                            <li>Created **responsive and accessible** web pages using **HTML5, CSS3, and Vanilla JavaScript** for internal and client projects.</li>
+                            <li>Created responsive and accessible web pages using HTML5, CSS3, and Vanilla JavaScript for internal and client projects.</li>
                             <li>Integrated front-end interfaces with server-side logic, demonstrating proficiency in dynamic data manipulation.</li>
-                            <li>Utilized **Git** for collaborative development, ensuring effective version control and code management within a team.</li>
+                            <li>Utilized Git for collaborative development, ensuring effective version control and code management within a team.</li>
                         </ul>
                     </div>
 
@@ -309,16 +351,21 @@
                     <div class="border-l-4 border-gray-500 pl-5">
                         <h4 class="text-xl font-semibold text-white">B.E. Computer Science and Engineering</h4>
                         <p class="text-gray-400">Knowledge Institute of Technology, Salem</p>
-                        <p class="text-sm text-gray-500">2022–2026 (Pursuing) | **Current CGPA: 8.77/10.0**</p>
+                        <p class="text-sm text-gray-500">2022–2026 (Pursuing) | Current CGPA: 8.65/10.0</p>
                     </div>
 
 
                     <div class="border-l-4 border-gray-500 pl-5">
                         <h4 class="text-xl font-semibold text-white">Higher Secondary Education (HSC)</h4>
                         <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
-                        <p class="text-sm text-gray-500">2022 | **Score: 87.5%**</p>
+                        <p class="text-sm text-gray-500">2022 | Score: 89.5%</p>
                     </div>
 
+                     <div class="border-l-4 border-gray-500 pl-5">
+                        <h4 class="text-xl font-semibold text-white"> Secondary Education (SSLC)</h4>
+                        <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
+                        <p class="text-sm text-gray-500">2022 | Score: 80%</p>
+                    </div>
 
                 </div>
             </section>
@@ -329,19 +376,19 @@
                 <ul class="list-none ml-0 space-y-4 text-gray-400">
                     <li class="pl-0 border-l-4 border-red-500 pl-3">
                         <i data-lucide="zap" class="w-5 h-5 mr-2 inline-block text-red-500"></i>
-                        **Smart India Hackathon & MSME Hackathon:** Active participant in national and college-level hackathons, successfully applying problem-solving skills under time pressure.
+                        Smart India Hackathon & MSME Hackathon: Active participant in national and college-level hackathons, successfully applying problem-solving skills under time pressure.
                     </li>
                     <li class="pl-0 border-l-4 border-purple-500 pl-3">
                         <i data-lucide="cpu" class="w-5 h-5 mr-2 inline-block text-purple-500"></i>
-                        **Accenture Innovation Challenge:** Developed and presented an innovative technical solution to address a real-world business problem.
+                        Accenture Innovation Challenge: Developed and presented an innovative technical solution to address a real-world business problem.
                     </li>
                     <li class="pl-0 border-l-4 border-yellow-500 pl-3">
                         <i data-lucide="trophy" class="w-5 h-5 mr-2 inline-block text-yellow-500"></i>
-                        **TCS CodeVita:** Competed, showcasing advanced algorithmic and coding skills against a large national talent pool.
+                        TCS CodeVita: Competed, showcasing advanced algorithmic and coding skills against a large national talent pool.
                     </li>
                     <li class="pl-0 border-l-4 border-teal-500 pl-3">
                         <i data-lucide="notebook-text" class="w-5 h-5 mr-2 inline-block text-teal-500"></i>
-                        **National Conference (March 2025):** Currently preparing to present a research paper focused on **Sustainable Development with AI**.
+                        National Conference (March 2025): Currently preparing to present a research paper focused on Sustainable Development with AI.
                     </li>
                 </ul>
             </section>
