@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333;
+}
+
+header {
+    background: #333; /* Dark header background */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #0077b5; /* LinkedIn's primary blue color */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.project-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 3px solid #0077b5;
+}
+
+.project-item a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #0077b5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 20px;
+}

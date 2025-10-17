@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indhuvadhani Y - Aspiring Software Developer Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Heroicons for modern icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* Custom Styles for Inter Font and professional feel */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark Blue-Gray Background (Slate 900) */
+            color: #f3f4f6; /* Light Text */
+        }
+        .section-card {
+            background-color: #1e293b; /* Darker Card Background (Slate 800) */
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            border: 1px solid #334155; /* Subtle Border */
+            transition: all 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+        }
+        /* Accent color for headers and links (Vibrant Teal) */
+        .accent-text {
+            color: #2dd4bf; 
+        }
+        /* Project highlight border */
+        .project-highlight {
+            border-left: 4px solid #2dd4bf;
+        }
+        /* Added padding to account for fixed navigation bar */
+        main section, header {
+            scroll-margin-top: 72px; 
+        }
+        .nav-link:hover {
+            color: #2dd4bf;
+        }
+        .download-btn {
+            background-color: #2dd4bf;
+            color: #0f172a;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #14b8a6;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- NAVIGATION MENU -->
+    <nav class="sticky top-0 z-50 bg-gray-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center space-x-6 overflow-x-auto">
+            <a href="#about" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">About Me</a>
+            <a href="#skills" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Skills & Platforms</a>
+            <a href="#projects" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Projects</a>
+            <a href="#experience" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Internships</a>
+            <a href="#achievements" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Extracurriculars</a>
+            <a href="#contact" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header & Resume Download -->
+    <header class="bg-gray-900 text-white py-12 md:py-20" id="top">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-5xl font-extrabold tracking-tight">Indhuvadhani Y</h1>
+            <p class="text-2xl font-light mt-2 text-teal-400">Aspiring Software Developer</p>
+            
+            <!-- RESUME DOWNLOAD FEATURE -->
+            <a id="download-resume-btn" 
+               href="C:\Users\indhu\OneDrive\Documents\RESUME" 
+               target="_blank" 
+               class="download-btn inline-flex items-center mt-6">
+                <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download Full Resume
+            </a>
+            <p class="text-xs mt-2 text-gray-500">
+                (Remember to replace the `` placeholder)
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+        <!-- LEFT COLUMN: About Me, Contact -->
+        <div class="lg:col-span-1 space-y-10">
+
+            <!-- About Me Section (with Image) -->
+            <section class="section-card" id="about">
+                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">ABOUT ME</h3>
+                
+                <!-- PROFILE IMAGE PLACEHOLDER -->
+                <div class="mb-6 text-center">
+                    <!-- Replace the src with your actual image URL -->
+                    <img src="https://placehold.co/150x150/2dd4bf/1e293b?text=IY" alt="Indhuvadhani Y Profile Photo" class="w-36 h-36 rounded-full mx-auto border-4 border-teal-400 shadow-xl object-cover">
+                </div>
+                
+                <h4 class="text-xl font-semibold mb-3 text-white">Professional Summary</h4>
+                <p class="text-gray-300 leading-relaxed">
+                    Computer Science enthusiast with strong skills in software development, problem-solving, and team collaboration. Proven ability to deliver results in fast-paced, agile workflows and deadline-driven environments. Skilled in full-stack development, data handling, and aiming to drive innovation in tech-focused roles.
+                </p>
+            </section>
+
+            <!-- Contact Information -->
+            <section class="section-card" id="contact">
+                <h3 class="text-xl font-bold accent-text mb-4 border-b border-gray-700 pb-2">CONTACT DETAILS</h3>
+                <div class="space-y-3 text-gray-300">
+                    <p class="flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-3 text-teal-400"></i> 8438488493</p>
+                    <p class="flex items-center"><i data-lucide="map-pin" class="w-4 h-4 mr-3 text-teal-400"></i> 79 Ammal Eari St., Salem City 636006</p>
+                    <p class="flex items-center"><i data-lucide="mail" class="w-4 h-4 mr-3 text-teal-400"></i> <a href="mailto:indhu4yuvaraj@gmail.com" class="hover:underline accent-text">indhu4yuvaraj@gmail.com</a></p>
+                    <p class="flex items-center"><i data-lucide="linkedin" class="w-4 h-4 mr-3 text-teal-400"></i> <a href="https://www.linkedin.com/in/indhuvadhani2005" target="_blank" class="hover:underline accent-text">linkedin.com/in/indhuvadhani2005</a></p>
+                </div>
+            </section>
+
+            <!-- Area of Interest & Certifications -->
+            <section class="section-card">
+                <h3 class="text-xl font-bold accent-text mb-4 border-b border-gray-700 pb-2">CAREER FOCUS</h3>
+                <div class="space-y-4">
+                    <h4 class="font-semibold text-white">Area of Interest</h4>
+                    <ul class="list-disc ml-5 space-y-1 text-gray-300">
+                        <li>Software Development Life Cycle (SDLC)</li>
+                        <li>Full Stack Development</li>
+                        <li>User Experience (UX) & Interface Design</li>
+                        <li>Data Science & Analytics</li>
+                    </ul>
+                    <h4 class="font-semibold text-white pt-3">Certifications</h4>
+                    <ul class="list-disc ml-5 space-y-1 text-gray-300">
+                        <li>NPTEL – Certified in Problem Solving through C</li>
+                        <li>HackerRank – Certified in Problem Solving</li>
+                        <li>Udemy – Advanced C Programming</li>
+                        <li>Udemy – SQL for Data Management</li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT COLUMN: Skills, Projects, Experience, Education -->
+        <div class="lg:col-span-2 space-y-10">
+            
+            <!-- Technical Skills & Platforms (ID for Menu: #skills) -->
+            <section class="section-card" id="skills">
+                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">TECHNICAL SKILLS & PLATFORMS</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Programming Languages -->
+                    <div>
+                        <p class="font-semibold text-white mb-2">Programming Languages</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-900 text-blue-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-800 transition">C</span>
+                            <span class="bg-blue-900 text-blue-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-800 transition">Core Java</span>
+                            <span class="bg-blue-900 text-blue-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-800 transition">Python</span>
+                        </div>
+                    </div>
+                    <!-- Web Development & Database -->
+                    <div>
+                        <p class="font-semibold text-white mb-2">Web & Database</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-green-900 text-green-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-green-800 transition">HTML</span>
+                            <span class="bg-green-900 text-green-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-green-800 transition">CSS</span>
+                            <span class="bg-red-900 text-red-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-red-800 transition">SQL</span>
+                        </div>
+                    </div>
+                    <!-- Concepts & Platforms -->
+                    <div class="sm:col-span-2">
+                        <p class="font-semibold text-white mb-2">Core Concepts & Platforms</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-900 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-yellow-800 transition">DSA</span>
+                            <span class="bg-yellow-900 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-yellow-800 transition">Machine Learning</span>
+                            <span class="bg-indigo-900 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-indigo-800 transition">HackerRank</span>
+                            <span class="bg-indigo-900 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-indigo-800 transition">GFG</span>
+                            <span class="bg-indigo-900 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-indigo-800 transition">Leetcode</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Projects Section (ID for Menu: #projects) -->
+            <section class="section-card" id="projects">
+                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">FEATURED PROJECTS</h3>
+                <div class="space-y-8">
+                    
+                    <!-- Project 1: Museum Ticket Booking Chatbot -->
+                    <div class="project-highlight pl-4">
+                        <h4 class="text-lg font-semibold text-white">Museum Ticket Booking Chatbot</h4>
+                        <p class="text-sm text-gray-400 mb-2">**Technologies:** Dialogflow, Google Maps API, Oracle DB, QR Verification</p>
+                        <p class="text-gray-300">Developed a robust, multilingual chatbot system to streamline the museum ticketing process.</p>
+                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
+                            <li>Implemented **Dialogflow** for natural language understanding and automated conversation flow.</li>
+                            <li>Integrated **Oracle DB** to manage ticket inventory and customer transaction records securely.</li>
+                            <li>Designed a **QR-based verification** system to ensure quick and efficient entry validation, significantly reducing queue times.</li>
+                        </ul>
+                        <a href="#" class="text-teal-400 hover:text-teal-300 font-medium mt-2 inline-flex items-center transition">
+                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> View Code/Demo
+                        </a>
+                    </div>
+
+                    <!-- Project 2: Municipal Corporation Management System -->
+                    <div class="project-highlight pl-4">
+                        <h4 class="text-lg font-semibold text-white mt-4">Municipal Corporation Management System</h4>
+                        <p class="text-sm text-gray-400 mb-2">**Technologies:** HTML, CSS, JavaScript, Core Java (JDBC)</p>
+                        <p class="text-gray-300">Built a centralized web application to automate key municipal services and citizen records.</p>
+                         <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
+                            <li>Engineered the **full-stack application** utilizing HTML/CSS/JS for the front-end user interface.</li>
+                            <li>Managed secure data transactions using **JDBC** to connect the Java backend with the underlying database.</li>
+                            <li>Focused on **responsive design** to ensure the system is accessible to staff members on various devices.</li>
+                        </ul>
+                        <a href="#" class="text-teal-400 hover:text-teal-300 font-medium mt-2 inline-flex items-center transition">
+                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> View Code/Demo
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Work History / Internships (ID for Menu: #experience) -->
+            <section class="section-card" id="experience">
+                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">INTERNSHIPS & WORK HISTORY</h3>
+                <div class="space-y-6">
+
+                    <!-- Internship 1: Java Full Stack -->
+                    <div class="border-l-4 border-teal-500 pl-4">
+                        <h4 class="text-lg font-semibold text-white">Internship – Java Full Stack</h4>
+                        <p class="text-md text-gray-400">DEV Technologies | <span class="text-sm font-light">Duration Ongoing/Date Range</span></p>
+                        <p class="text-gray-300 mt-1">Gained hands-on experience in building scalable enterprise applications using modern development practices.</p>
+                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
+                            <li>Developed and debugged **RESTful APIs** using **Java** and **Spring Boot** for core application logic.</li>
+                            <li>Gained exposure to **UI/UX design** principles and implemented responsive front-end components.</li>
+                            <li>Participated in the **Agile SDLC**, contributing to requirement analysis and deployment of functional modules.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Internship 2: Web Development -->
+                    <div class="border-l-4 border-teal-500 pl-4">
+                        <h4 class="text-lg font-semibold text-white">Internship – Web Development</h4>
+                        <p class="text-md text-gray-400">TechnoHacks Edutech Pvt. Ltd | <span class="text-sm font-light">Duration/Date Range</span></p>
+                        <p class="text-gray-300 mt-1">Focused on developing robust and user-friendly web interfaces for internal tools and client projects.</p>
+                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
+                            <li>Created **responsive and accessible** web pages using **HTML5, CSS3, and JavaScript**.</li>
+                            <li>Integrated front-end interfaces with server-side logic for dynamic data handling.</li>
+                            <li>Utilized version control (**Git**) for collaborative development and code management.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Achievements & Extracurriculars (ID for Menu: #achievements) -->
+            <section class="section-card" id="achievements">
+                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">ACHIEVEMENTS & EXTRACURRICULARS</h3>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li class="pl-1"><strong>Smart India Hackathon & MSME Hackathon:</strong> Participated in national and college-level hackathons, applying problem-solving skills in competitive settings.</li>
+                    <li class="pl-1"><strong>Accenture Innovation Challenge:</strong> Developed innovative solutions for real-world problems.</li>
+                    <li class="pl-1"><strong>TCS CodeVita:</strong> Competed, demonstrating advanced algorithmic and coding skills in a competitive environment.</li>
+                    <li class="pl-1"><strong>National Conference (March 2025):</strong> Presenting a paper on Sustainable Development with AI.</li>
+                </ul>
+            </section>
+            
+            <!-- Education (ID for Menu: #education) -->
+            <section class="section-card" id="education">
+                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">EDUCATION</h3>
+                <div class="space-y-6">
+
+                    <!-- College -->
+                    <div class="border-l-4 border-gray-500 pl-4">
+                        <h4 class="text-lg font-semibold text-white">Bachelor of Engineering in Computer Science</h4>
+                        <p class="text-gray-400">Knowledge Institute of Technology, Salem</p>
+                        <p class="text-sm text-gray-500">2022–2026 (Pursuing, Final Year) | CGPA: 8.77</p>
+                    </div>
+
+                    <!-- HSC -->
+                    <div class="border-l-4 border-gray-500 pl-4">
+                        <h4 class="text-lg font-semibold text-white">Higher Secondary Education</h4>
+                        <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
+                        <p class="text-sm text-gray-500">2022 – 2024 | Score: 87.5%</p>
+                    </div>
+
+                    <!-- SSLC -->
+                    <div class="border-l-4 border-gray-500 pl-4">
+                        <h4 class="text-lg font-semibold text-white">Secondary Education</h4>
+                        <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
+                        <p class="text-sm text-gray-500">2020– 2022 | Score 80%</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <p class="text-sm mb-2">&copy; 2025 Indhuvadhani Y. Crafted with HTML and Tailwind CSS.</p>
+        <p class="text-xs text-gray-500">
+            Current Visitor Session ID: <span id="visitor-id-display" class="font-mono text-teal-400">Loading...</span>
+        </p>
+    </footer>
+
+    <!-- JavaScript for Firebase, Click Tracking, and Smooth Scrolling -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        let db, auth;
+
+        /**
+         * Initializes Firebase and attempts to record the portfolio visit.
+         */
+        async function initFirebaseAndTrackVisit() {
+            try {
+                // 1. Initialize Firebase services
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                
+                // Set Firestore logging to debug mode
+                setLogLevel('Debug'); 
+                console.log("Firebase services initialized.");
+
+                // 2. Handle Authentication
+                let userId = null;
+                
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                    userId = auth.currentUser.uid;
+                } else {
+                    const userCredential = await signInAnonymously(auth);
+                    userId = userCredential.user.uid;
+                }
+                
+                if (!userId) {
+                    // Fallback if authentication fails (shouldn't happen)
+                    userId = crypto.randomUUID(); 
+                    console.error("Authentication failed, using random UUID.");
+                }
+
+                document.getElementById('visitor-id-display').textContent = userId;
+                console.log(`Authenticated with userId: ${userId}`);
+
+                // 3. Record the visit in the public collection
+                const collectionPath = `/artifacts/${appId}/public/data/portfolio_visits`;
+                const visitsCollection = collection(db, collectionPath);
+
+                await addDoc(visitsCollection, {
+                    timestamp: serverTimestamp(),
+                    visitorId: userId,
+                    source: 'LinkedIn Profile Click (External)',
+                    userAgent: navigator.userAgent
+                });
+
+                console.log(`Visit successfully recorded for user ${userId} in ${collectionPath}`);
+
+            } catch (error) {
+                console.error("Error during Firebase initialization or tracking visit:", error);
+                document.getElementById('visitor-id-display').textContent = 'Tracking Failed';
+            }
+        }
+
+        // --- Standard Portfolio Logic (Smooth Scrolling) ---
+        
+        // Smooth scrolling logic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    const navHeight = 64; 
+                    const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Highlight active link when scrolling
+        const sections = document.querySelectorAll("main section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('accent-text');
+                        if (link.getAttribute('href') === `#${entry.target.id}`) {
+                            link.classList.add('accent-text');
+                        }
+                    });
+                }
+            });
+        }, { rootMargin: '-30% 0px -70% 0px' }); 
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        
+        // Start Firebase on page load to immediately record the click
+        window.onload = initFirebaseAndTrackVisit;
+
+    </script>
+
+</body>
+</html>
