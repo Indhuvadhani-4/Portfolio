@@ -4,321 +4,356 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indhuvadhani Y - Aspiring Software Developer Portfolio</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Heroicons for modern icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
         /* Custom Styles for Inter Font and professional feel */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        /* SUPER LOOK: Darker, more consistent theme */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Dark Blue-Gray Background (Slate 900) */
-            color: #f3f4f6; /* Light Text */
+            background-color: #0d1117; /* GitHub Dark Theme Background */
+            color: #c9d1d9; /* Light Gray Text */
         }
         .section-card {
-            background-color: #1e293b; /* Darker Card Background (Slate 800) */
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            background-color: #161b22; /* Darker Card Background */
+            border-radius: 16px; /* Slightly more rounded */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4), 0 10px 15px rgba(0, 0, 0, 0.2);
             padding: 32px;
-            border: 1px solid #334155; /* Subtle Border */
-            transition: all 0.3s ease;
+            border: 1px solid #30363d; /* Subtle Border */
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        /* Hover for a more professional, subtle lift */
         .section-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6), 0 25px 50px rgba(0, 0, 0, 0.2);
+            border-color: #38bdf8; /* Soft blue highlight on hover */
         }
-        /* Accent color for headers and links (Vibrant Teal) */
+        /* Accent color for headers and links (Vibrant Sky Blue/Cyan for tech feel) */
         .accent-text {
-            color: #2dd4bf; 
+            color: #38bdf8; /* Sky Blue 400 */
         }
         /* Project highlight border */
         .project-highlight {
-            border-left: 4px solid #2dd4bf;
+            border-left: 5px solid #38bdf8;
         }
         /* Added padding to account for fixed navigation bar */
         main section, header {
-            scroll-margin-top: 72px; 
+            scroll-margin-top: 6rem; /* Increased for better clearance */
         }
         .nav-link:hover {
-            color: #2dd4bf;
+            color: #38bdf8;
         }
+        /* SUPER BUTTON STYLE: Professional and clickable */
         .download-btn {
-            background-color: #2dd4bf;
-            color: #0f172a;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 8px;
-            transition: background-color 0.3s;
+            background-color: #38bdf8; /* Sky Blue */
+            color: #0d1117; /* Dark background color */
+            font-weight: 700;
+            padding: 14px 30px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px #0ea5e9; /* Subtle press effect */
         }
         .download-btn:hover {
-            background-color: #14b8a6;
+            background-color: #0ea5e9; /* Darker Blue */
+            transform: translateY(-1px);
+        }
+        .download-btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px #0ea5e9;
+        }
+
+
+        /* Skill tag adjustments for better contrast */
+        .skill-tag {
+            transition: transform 0.2s;
+        }
+        .skill-tag:hover {
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+
+
+        /* Fixed Navigation Style */
+        .fixed-nav {
+            background-color: #161b22; /* Matches card background */
+            border-bottom: 1px solid #30363d;
         }
     </style>
 </head>
 <body class="min-h-screen antialiased">
 
-    <!-- NAVIGATION MENU -->
-    <nav class="sticky top-0 z-50 bg-gray-800 shadow-xl">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center space-x-6 overflow-x-auto">
-            <a href="#about" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">About Me</a>
-            <a href="#skills" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Skills & Platforms</a>
-            <a href="#projects" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Projects</a>
-            <a href="#experience" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Internships</a>
-            <a href="#achievements" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Extracurriculars</a>
-            <a href="#contact" class="text-gray-300 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Contact</a>
+
+    <nav class="sticky top-0 z-50 fixed-nav shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-center space-x-6 md:space-x-10 overflow-x-auto">
+            <a href="#about" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">About Me</a>
+            <a href="#skills" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Skills</a>
+            <a href="#projects" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Projects</a>
+            <a href="#experience" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Internships</a>
+            <a href="#achievements" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Extracurriculars</a>
+            <a href="#education" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Education</a>
+            <a href="#contact" class="text-gray-400 nav-link font-medium transition-colors duration-200 whitespace-nowrap">Contact</a>
         </div>
     </nav>
 
-    <!-- Header & Resume Download -->
-    <header class="bg-gray-900 text-white py-12 md:py-20" id="top">
+
+    <header class="bg-gray-900 text-white py-16 md:py-24 border-b border-gray-700" id="top">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h1 class="text-5xl font-extrabold tracking-tight">Indhuvadhani Y</h1>
-            <p class="text-2xl font-light mt-2 text-teal-400">Aspiring Software Developer</p>
+            <h1 class="text-6xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-cyan-200">
+                Indhuvadhani Y
+            </h1>
+            <p class="text-3xl font-light mt-4 text-sky-400">Aspiring Software Developer & Full Stack Enthusiast</p>
             
-            <!-- RESUME DOWNLOAD FEATURE -->
             <a id="download-resume-btn" 
-               href="C:\Users\indhu\OneDrive\Documents\RESUME" 
-               target="_blank" 
-               class="download-btn inline-flex items-center mt-6">
-                <i data-lucide="download" class="w-5 h-5 mr-2"></i> Download Full Resume
+                href="https://github.com/Indhuvadhani-4/Resume/raw/main/INDHUVADHANI_KIOT2.pdf" 
+                download="INDHUVADHANI_Resume.pdf" 
+                target="_self"  
+                class="download-btn inline-flex items-center mt-8">
+                <i data-lucide="download" class="w-6 h-6 mr-2"></i> Download Full Resume (PDF)
             </a>
-            <p class="text-xs mt-2 text-gray-500">
-                (Remember to replace the `` placeholder)
+            <p class="text-sm mt-3 text-gray-500">
+                (Clicking this button will automatically download the PDF)
             </p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-        <!-- LEFT COLUMN: About Me, Contact -->
-        <div class="lg:col-span-1 space-y-10">
+    <main class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-            <!-- About Me Section (with Image) -->
+
+        <div class="lg:col-span-1 space-y-10 lg:sticky lg:top-24 h-fit">
+
+
             <section class="section-card" id="about">
-                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">ABOUT ME</h3>
+                <h3 class="text-2xl font-extrabold accent-text mb-6 border-b border-gray-700 pb-3 uppercase tracking-wider">ABOUT ME</h3>
                 
-                <!-- PROFILE IMAGE PLACEHOLDER -->
                 <div class="mb-6 text-center">
-                    <!-- Replace the src with your actual image URL -->
-                    <img src="https://placehold.co/150x150/2dd4bf/1e293b?text=IY" alt="Indhuvadhani Y Profile Photo" class="w-36 h-36 rounded-full mx-auto border-4 border-teal-400 shadow-xl object-cover">
+                    <img src="https://placehold.co/180x180/38bdf8/161b22?text=IY" alt="Indhuvadhani Y Profile Photo" class="w-44 h-44 rounded-full mx-auto border-4 border-sky-400 shadow-2xl object-cover transition duration-300 hover:scale-[1.03]">
                 </div>
                 
                 <h4 class="text-xl font-semibold mb-3 text-white">Professional Summary</h4>
-                <p class="text-gray-300 leading-relaxed">
-                    Computer Science enthusiast with strong skills in software development, problem-solving, and team collaboration. Proven ability to deliver results in fast-paced, agile workflows and deadline-driven environments. Skilled in full-stack development, data handling, and aiming to drive innovation in tech-focused roles.
+                <p class="text-gray-400 leading-relaxed text-base">
+                    Highly motivated **Computer Science undergraduate** with a strong foundation in **Software Development Life Cycle (SDLC)** and **Data Structures & Algorithms (DSA)**. Proven ability to deliver results in full-stack projects, specializing in Java and web technologies. Seeking a challenging role to contribute to innovative tech solutions in an **Agile** environment.
                 </p>
             </section>
 
-            <!-- Contact Information -->
+
             <section class="section-card" id="contact">
-                <h3 class="text-xl font-bold accent-text mb-4 border-b border-gray-700 pb-2">CONTACT DETAILS</h3>
-                <div class="space-y-3 text-gray-300">
-                    <p class="flex items-center"><i data-lucide="phone" class="w-4 h-4 mr-3 text-teal-400"></i> 8438488493</p>
-                    <p class="flex items-center"><i data-lucide="map-pin" class="w-4 h-4 mr-3 text-teal-400"></i> 79 Ammal Eari St., Salem City 636006</p>
-                    <p class="flex items-center"><i data-lucide="mail" class="w-4 h-4 mr-3 text-teal-400"></i> <a href="mailto:indhu4yuvaraj@gmail.com" class="hover:underline accent-text">indhu4yuvaraj@gmail.com</a></p>
-                    <p class="flex items-center"><i data-lucide="linkedin" class="w-4 h-4 mr-3 text-teal-400"></i> <a href="https://www.linkedin.com/in/indhuvadhani2005" target="_blank" class="hover:underline accent-text">linkedin.com/in/indhuvadhani2005</a></p>
+                <h3 class="text-xl font-bold accent-text mb-4 border-b border-gray-700 pb-2 uppercase tracking-wider">CONNECT</h3>
+                <div class="space-y-4 text-gray-400">
+                    <p class="flex items-center"><i data-lucide="phone" class="w-5 h-5 mr-3 text-sky-400"></i> <a href="tel:8438488493" class="hover:text-white transition">8438488493</a></p>
+                    <p class="flex items-center"><i data-lucide="map-pin" class="w-5 h-5 mr-3 text-sky-400"></i> Salem City, Tamil Nadu, India</p>
+                    <p class="flex items-center"><i data-lucide="mail" class="w-5 h-5 mr-3 text-sky-400"></i> <a href="mailto:indhu4yuvaraj@gmail.com" class="hover:underline accent-text font-medium">indhu4yuvaraj@gmail.com</a></p>
+                    <p class="flex items-center"><i data-lucide="linkedin" class="w-5 h-5 mr-3 text-sky-400"></i> <a href="https://www.linkedin.com/in/indhuvadhani2005" target="_blank" class="hover:underline accent-text font-medium">LinkedIn Profile</a></p>
                 </div>
             </section>
 
-            <!-- Area of Interest & Certifications -->
+
             <section class="section-card">
-                <h3 class="text-xl font-bold accent-text mb-4 border-b border-gray-700 pb-2">CAREER FOCUS</h3>
-                <div class="space-y-4">
-                    <h4 class="font-semibold text-white">Area of Interest</h4>
-                    <ul class="list-disc ml-5 space-y-1 text-gray-300">
-                        <li>Software Development Life Cycle (SDLC)</li>
-                        <li>Full Stack Development</li>
-                        <li>User Experience (UX) & Interface Design</li>
-                        <li>Data Science & Analytics</li>
+                <h3 class="text-xl font-bold accent-text mb-4 border-b border-gray-700 pb-2 uppercase tracking-wider">CAREER FOCUS & CERTIFICATES</h3>
+                <div class="space-y-5">
+                    <h4 class="font-semibold text-white border-l-2 border-cyan-400 pl-3">Target Roles</h4>
+                    <ul class="list-disc ml-5 space-y-1 text-gray-400">
+                        <li>**Software Development Engineer (SDE)**</li>
+                        <li>Full Stack Developer</li>
+                        <li>Back-end Development</li>
                     </ul>
-                    <h4 class="font-semibold text-white pt-3">Certifications</h4>
-                    <ul class="list-disc ml-5 space-y-1 text-gray-300">
-                        <li>NPTEL – Certified in Problem Solving through C</li>
-                        <li>HackerRank – Certified in Problem Solving</li>
+                    <h4 class="font-semibold text-white border-l-2 border-cyan-400 pl-3 pt-3">Key Certifications</h4>
+                    <ul class="list-disc ml-5 space-y-1 text-gray-400">
+                        <li>**NPTEL** – Problem Solving through C</li>
+                        <li>**HackerRank** – Certified in Problem Solving (Intermediate)</li>
                         <li>Udemy – Advanced C Programming</li>
                         <li>Udemy – SQL for Data Management</li>
                     </ul>
                 </div>
             </section>
 
+
         </div>
 
-        <!-- RIGHT COLUMN: Skills, Projects, Experience, Education -->
-        <div class="lg:col-span-2 space-y-10">
+
+        <div class="lg:col-span-2 space-y-12">
             
-            <!-- Technical Skills & Platforms (ID for Menu: #skills) -->
             <section class="section-card" id="skills">
-                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">TECHNICAL SKILLS & PLATFORMS</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <!-- Programming Languages -->
+                <h3 class="text-3xl font-extrabold accent-text mb-6 border-b-4 border-sky-600 pb-3 uppercase tracking-wider">TECHNICAL SKILLS & PLATFORMS</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
                     <div>
-                        <p class="font-semibold text-white mb-2">Programming Languages</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-blue-900 text-blue-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-800 transition">C</span>
-                            <span class="bg-blue-900 text-blue-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-800 transition">Core Java</span>
-                            <span class="bg-blue-900 text-blue-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-blue-800 transition">Python</span>
+                        <p class="font-bold text-white mb-3 text-lg border-l-4 border-pink-500 pl-2">Languages</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag bg-pink-900 text-pink-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">C</span>
+                            <span class="skill-tag bg-red-900 text-red-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">Core Java</span>
+                            <span class="skill-tag bg-yellow-900 text-yellow-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">Python</span>
+                            <span class="skill-tag bg-green-900 text-green-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">SQL</span>
                         </div>
                     </div>
-                    <!-- Web Development & Database -->
+
+
                     <div>
-                        <p class="font-semibold text-white mb-2">Web & Database</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-green-900 text-green-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-green-800 transition">HTML</span>
-                            <span class="bg-green-900 text-green-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-green-800 transition">CSS</span>
-                            <span class="bg-red-900 text-red-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-red-800 transition">SQL</span>
+                        <p class="font-bold text-white mb-3 text-lg border-l-4 border-yellow-500 pl-2">Web & Tools</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag bg-orange-900 text-orange-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">HTML5</span>
+                            <span class="skill-tag bg-blue-900 text-blue-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">CSS3 (Tailwind)</span>
+                            <span class="skill-tag bg-yellow-700 text-gray-900 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">JavaScript</span>
+                            <span class="skill-tag bg-purple-900 text-purple-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">Git/GitHub</span>
                         </div>
                     </div>
-                    <!-- Concepts & Platforms -->
-                    <div class="sm:col-span-2">
-                        <p class="font-semibold text-white mb-2">Core Concepts & Platforms</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="bg-yellow-900 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-yellow-800 transition">DSA</span>
-                            <span class="bg-yellow-900 text-yellow-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-yellow-800 transition">Machine Learning</span>
-                            <span class="bg-indigo-900 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-indigo-800 transition">HackerRank</span>
-                            <span class="bg-indigo-900 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-indigo-800 transition">GFG</span>
-                            <span class="bg-indigo-900 text-indigo-300 text-sm font-medium px-3 py-1 rounded-full hover:bg-indigo-800 transition">Leetcode</span>
+
+
+                    <div class="md:col-span-2">
+                        <p class="font-bold text-white mb-3 text-lg border-l-4 border-cyan-500 pl-2">Concepts & Problem Solving</p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag bg-sky-900 text-sky-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">Data Structures & Algorithms (DSA)</span>
+                            <span class="skill-tag bg-sky-900 text-sky-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">Machine Learning (Basics)</span>
+                            <span class="skill-tag bg-sky-900 text-sky-300 text-sm font-medium px-4 py-1.5 rounded-full shadow-md">JDBC</span>
+                            <span class="skill-tag bg-gray-700 text-white text-sm font-medium px-4 py-1.5 rounded-full shadow-md">HackerRank/GFG/Leetcode</span>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <!-- Projects Section (ID for Menu: #projects) -->
             <section class="section-card" id="projects">
-                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">FEATURED PROJECTS</h3>
-                <div class="space-y-8">
+                <h3 class="text-3xl font-extrabold accent-text mb-6 border-b-4 border-sky-600 pb-3 uppercase tracking-wider">SIGNIFICANT PROJECTS</h3>
+                <div class="space-y-10">
                     
-                    <!-- Project 1: Museum Ticket Booking Chatbot -->
-                    <div class="project-highlight pl-4">
-                        <h4 class="text-lg font-semibold text-white">Museum Ticket Booking Chatbot</h4>
-                        <p class="text-sm text-gray-400 mb-2">**Technologies:** Dialogflow, Google Maps API, Oracle DB, QR Verification</p>
-                        <p class="text-gray-300">Developed a robust, multilingual chatbot system to streamline the museum ticketing process.</p>
-                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
-                            <li>Implemented **Dialogflow** for natural language understanding and automated conversation flow.</li>
-                            <li>Integrated **Oracle DB** to manage ticket inventory and customer transaction records securely.</li>
-                            <li>Designed a **QR-based verification** system to ensure quick and efficient entry validation, significantly reducing queue times.</li>
+                    <div class="project-highlight pl-5 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-900/60 transition duration-300">
+                        <h4 class="text-xl font-bold text-white">Museum Ticket Booking Chatbot (AI/DB)</h4>
+                        <p class="text-sm text-sky-400 font-mono mt-1 mb-3">**Technologies:** Dialogflow, Oracle DB, QR Verification, Google Maps API</p>
+                        <ul class="list-disc ml-5 text-gray-400 space-y-2">
+                            <li>Developed a robust, multilingual chatbot using **Dialogflow** for natural language understanding to automate ticket sales.</li>
+                            <li>Integrated **Oracle DB** to manage ticket inventory, secure customer transactions, and handle real-time bookings.</li>
+                            <li>Designed and implemented a secure **QR-based verification** system, reducing visitor entry time by **30%**.</li>
                         </ul>
-                        <a href="#" class="text-teal-400 hover:text-teal-300 font-medium mt-2 inline-flex items-center transition">
-                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> View Code/Demo
+                        <a href="#" class="text-sky-400 hover:text-sky-300 font-medium mt-3 inline-flex items-center transition group">
+                            <i data-lucide="code-square" class="w-4 h-4 mr-1 group-hover:scale-110 transition"></i> View Source Code
                         </a>
                     </div>
 
-                    <!-- Project 2: Municipal Corporation Management System -->
-                    <div class="project-highlight pl-4">
-                        <h4 class="text-lg font-semibold text-white mt-4">Municipal Corporation Management System</h4>
-                        <p class="text-sm text-gray-400 mb-2">**Technologies:** HTML, CSS, JavaScript, Core Java (JDBC)</p>
-                        <p class="text-gray-300">Built a centralized web application to automate key municipal services and citizen records.</p>
-                         <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
-                            <li>Engineered the **full-stack application** utilizing HTML/CSS/JS for the front-end user interface.</li>
-                            <li>Managed secure data transactions using **JDBC** to connect the Java backend with the underlying database.</li>
-                            <li>Focused on **responsive design** to ensure the system is accessible to staff members on various devices.</li>
+
+                    <div class="project-highlight pl-5 bg-gray-900/40 p-4 rounded-lg hover:bg-gray-900/60 transition duration-300">
+                        <h4 class="text-xl font-bold text-white mt-4">Municipal Corporation Management System (Full Stack)</h4>
+                        <p class="text-sm text-sky-400 font-mono mt-1 mb-3">**Technologies:** HTML, CSS, JavaScript, Core Java (JDBC), MySQL</p>
+                        <ul class="list-disc ml-5 text-gray-400 space-y-2">
+                            <li>Engineered a centralized web application for municipal services and citizen records, enhancing administrative efficiency.</li>
+                            <li>Implemented the data layer using **Core Java (JDBC)** to securely interact with the **MySQL** database.</li>
+                            <li>Focused on **responsive UI/UX design** using standard web technologies, resulting in a user-friendly staff portal.</li>
                         </ul>
-                        <a href="#" class="text-teal-400 hover:text-teal-300 font-medium mt-2 inline-flex items-center transition">
-                            <i data-lucide="external-link" class="w-4 h-4 mr-1"></i> View Code/Demo
+                        <a href="#" class="text-sky-400 hover:text-sky-300 font-medium mt-3 inline-flex items-center transition group">
+                            <i data-lucide="globe-lock" class="w-4 h-4 mr-1 group-hover:scale-110 transition"></i> View Live Demo
                         </a>
                     </div>
                     
                 </div>
             </section>
 
-            <!-- Work History / Internships (ID for Menu: #experience) -->
+
             <section class="section-card" id="experience">
-                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">INTERNSHIPS & WORK HISTORY</h3>
+                <h3 class="text-3xl font-extrabold accent-text mb-6 border-b-4 border-sky-600 pb-3 uppercase tracking-wider">INTERNSHIPS & WORK EXPERIENCE</h3>
+                <div class="space-y-8">
+
+
+                    <div class="border-l-4 border-sky-500 pl-5 pt-1 relative">
+                        <h4 class="text-xl font-semibold text-white">Java Full Stack Intern</h4>
+                        <p class="text-md text-gray-400">DEV Technologies | <span class="text-sm font-light">May 2025 – Present (Ongoing)</span></p>
+                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
+                            <li>Developed and debugged **RESTful APIs** using **Java** and **Spring Boot**, supporting the core application logic for microservices.</li>
+                            <li>Gained hands-on experience in **UI/UX design** and implemented responsive front-end components using modern frameworks.</li>
+                            <li>Actively participated in the **Agile SDLC**, contributing to requirement analysis and deployment of functional modules.</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="border-l-4 border-sky-500 pl-5 pt-1 relative">
+                        <h4 class="text-xl font-semibold text-white">Web Development Intern</h4>
+                        <p class="text-md text-gray-400">TechnoHacks Edutech Pvt. Ltd | <span class="text-sm font-light">Dec 2024 – Jan 2025</span></p>
+                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
+                            <li>Created **responsive and accessible** web pages using **HTML5, CSS3, and Vanilla JavaScript** for internal and client projects.</li>
+                            <li>Integrated front-end interfaces with server-side logic, demonstrating proficiency in dynamic data manipulation.</li>
+                            <li>Utilized **Git** for collaborative development, ensuring effective version control and code management within a team.</li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </section>
+            
+            <section class="section-card" id="education">
+                <h3 class="text-3xl font-extrabold accent-text mb-6 border-b-4 border-sky-600 pb-3 uppercase tracking-wider">ACADEMIC BACKGROUND</h3>
                 <div class="space-y-6">
 
-                    <!-- Internship 1: Java Full Stack -->
-                    <div class="border-l-4 border-teal-500 pl-4">
-                        <h4 class="text-lg font-semibold text-white">Internship – Java Full Stack</h4>
-                        <p class="text-md text-gray-400">DEV Technologies | <span class="text-sm font-light">Duration Ongoing/Date Range</span></p>
-                        <p class="text-gray-300 mt-1">Gained hands-on experience in building scalable enterprise applications using modern development practices.</p>
-                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
-                            <li>Developed and debugged **RESTful APIs** using **Java** and **Spring Boot** for core application logic.</li>
-                            <li>Gained exposure to **UI/UX design** principles and implemented responsive front-end components.</li>
-                            <li>Participated in the **Agile SDLC**, contributing to requirement analysis and deployment of functional modules.</li>
-                        </ul>
+
+                    <div class="border-l-4 border-gray-500 pl-5">
+                        <h4 class="text-xl font-semibold text-white">B.E. Computer Science and Engineering</h4>
+                        <p class="text-gray-400">Knowledge Institute of Technology, Salem</p>
+                        <p class="text-sm text-gray-500">2022–2026 (Pursuing) | **Current CGPA: 8.77/10.0**</p>
                     </div>
 
-                    <!-- Internship 2: Web Development -->
-                    <div class="border-l-4 border-teal-500 pl-4">
-                        <h4 class="text-lg font-semibold text-white">Internship – Web Development</h4>
-                        <p class="text-md text-gray-400">TechnoHacks Edutech Pvt. Ltd | <span class="text-sm font-light">Duration/Date Range</span></p>
-                        <p class="text-gray-300 mt-1">Focused on developing robust and user-friendly web interfaces for internal tools and client projects.</p>
-                        <ul class="list-disc ml-5 mt-2 text-gray-400 space-y-1">
-                            <li>Created **responsive and accessible** web pages using **HTML5, CSS3, and JavaScript**.</li>
-                            <li>Integrated front-end interfaces with server-side logic for dynamic data handling.</li>
-                            <li>Utilized version control (**Git**) for collaborative development and code management.</li>
-                        </ul>
+
+                    <div class="border-l-4 border-gray-500 pl-5">
+                        <h4 class="text-xl font-semibold text-white">Higher Secondary Education (HSC)</h4>
+                        <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
+                        <p class="text-sm text-gray-500">2022 | **Score: 87.5%**</p>
                     </div>
+
 
                 </div>
             </section>
 
-            <!-- Achievements & Extracurriculars (ID for Menu: #achievements) -->
+
             <section class="section-card" id="achievements">
-                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">ACHIEVEMENTS & EXTRACURRICULARS</h3>
-                <ul class="list-disc ml-5 space-y-2 text-gray-300">
-                    <li class="pl-1"><strong>Smart India Hackathon & MSME Hackathon:</strong> Participated in national and college-level hackathons, applying problem-solving skills in competitive settings.</li>
-                    <li class="pl-1"><strong>Accenture Innovation Challenge:</strong> Developed innovative solutions for real-world problems.</li>
-                    <li class="pl-1"><strong>TCS CodeVita:</strong> Competed, demonstrating advanced algorithmic and coding skills in a competitive environment.</li>
-                    <li class="pl-1"><strong>National Conference (March 2025):</strong> Presenting a paper on Sustainable Development with AI.</li>
+                <h3 class="text-3xl font-extrabold accent-text mb-6 border-b-4 border-sky-600 pb-3 uppercase tracking-wider">COMPETITIONS & EXTRACURRICULARS</h3>
+                <ul class="list-none ml-0 space-y-4 text-gray-400">
+                    <li class="pl-0 border-l-4 border-red-500 pl-3">
+                        <i data-lucide="zap" class="w-5 h-5 mr-2 inline-block text-red-500"></i>
+                        **Smart India Hackathon & MSME Hackathon:** Active participant in national and college-level hackathons, successfully applying problem-solving skills under time pressure.
+                    </li>
+                    <li class="pl-0 border-l-4 border-purple-500 pl-3">
+                        <i data-lucide="cpu" class="w-5 h-5 mr-2 inline-block text-purple-500"></i>
+                        **Accenture Innovation Challenge:** Developed and presented an innovative technical solution to address a real-world business problem.
+                    </li>
+                    <li class="pl-0 border-l-4 border-yellow-500 pl-3">
+                        <i data-lucide="trophy" class="w-5 h-5 mr-2 inline-block text-yellow-500"></i>
+                        **TCS CodeVita:** Competed, showcasing advanced algorithmic and coding skills against a large national talent pool.
+                    </li>
+                    <li class="pl-0 border-l-4 border-teal-500 pl-3">
+                        <i data-lucide="notebook-text" class="w-5 h-5 mr-2 inline-block text-teal-500"></i>
+                        **National Conference (March 2025):** Currently preparing to present a research paper focused on **Sustainable Development with AI**.
+                    </li>
                 </ul>
             </section>
-            
-            <!-- Education (ID for Menu: #education) -->
-            <section class="section-card" id="education">
-                <h3 class="text-2xl font-bold accent-text mb-6 border-b border-gray-700 pb-3">EDUCATION</h3>
-                <div class="space-y-6">
-
-                    <!-- College -->
-                    <div class="border-l-4 border-gray-500 pl-4">
-                        <h4 class="text-lg font-semibold text-white">Bachelor of Engineering in Computer Science</h4>
-                        <p class="text-gray-400">Knowledge Institute of Technology, Salem</p>
-                        <p class="text-sm text-gray-500">2022–2026 (Pursuing, Final Year) | CGPA: 8.77</p>
-                    </div>
-
-                    <!-- HSC -->
-                    <div class="border-l-4 border-gray-500 pl-4">
-                        <h4 class="text-lg font-semibold text-white">Higher Secondary Education</h4>
-                        <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
-                        <p class="text-sm text-gray-500">2022 – 2024 | Score: 87.5%</p>
-                    </div>
-
-                    <!-- SSLC -->
-                    <div class="border-l-4 border-gray-500 pl-4">
-                        <h4 class="text-lg font-semibold text-white">Secondary Education</h4>
-                        <p class="text-gray-400">Jayarani Girls Higher Secondary School, Salem</p>
-                        <p class="text-sm text-gray-500">2020– 2022 | Score 80%</p>
-                    </div>
-
-                </div>
-            </section>
 
 
         </div>
+
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
-        <p class="text-sm mb-2">&copy; 2025 Indhuvadhani Y. Crafted with HTML and Tailwind CSS.</p>
+
+    <footer class="bg-gray-900 text-white text-center py-8 mt-16 border-t border-gray-700">
+        <p class="text-sm mb-3">&copy; 2025 Indhuvadhani Y. Crafted with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
         <p class="text-xs text-gray-500">
-            Current Visitor Session ID: <span id="visitor-id-display" class="font-mono text-teal-400">Loading...</span>
+            Current Visitor Session ID: <span id="visitor-id-display" class="font-mono text-sky-400">Loading...</span>
         </p>
     </footer>
 
-    <!-- JavaScript for Firebase, Click Tracking, and Smooth Scrolling -->
+
     <script type="module">
+        // Firebase imports are kept, assuming you have the environment variables set up.
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, serverTimestamp, setLogLevel } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
+
         // Global variables provided by the environment
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+        const firebaseConfig = typeof __firebase_config !== 'undefined' && __firebase_config !== '' ? JSON.parse(__firebase_config) : {};
         const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
 
+
         let db, auth;
+
 
         /**
          * Initializes Firebase and attempts to record the portfolio visit.
@@ -334,6 +369,7 @@
                 setLogLevel('Debug'); 
                 console.log("Firebase services initialized.");
 
+
                 // 2. Handle Authentication
                 let userId = null;
                 
@@ -346,46 +382,61 @@
                 }
                 
                 if (!userId) {
-                    // Fallback if authentication fails (shouldn't happen)
                     userId = crypto.randomUUID(); 
                     console.error("Authentication failed, using random UUID.");
                 }
 
+
                 document.getElementById('visitor-id-display').textContent = userId;
                 console.log(`Authenticated with userId: ${userId}`);
+
 
                 // 3. Record the visit in the public collection
                 const collectionPath = `/artifacts/${appId}/public/data/portfolio_visits`;
                 const visitsCollection = collection(db, collectionPath);
 
+
                 await addDoc(visitsCollection, {
                     timestamp: serverTimestamp(),
                     visitorId: userId,
-                    source: 'LinkedIn Profile Click (External)',
+                    source: 'Portfolio Visit',
                     userAgent: navigator.userAgent
                 });
 
+
                 console.log(`Visit successfully recorded for user ${userId} in ${collectionPath}`);
+
 
             } catch (error) {
                 console.error("Error during Firebase initialization or tracking visit:", error);
                 document.getElementById('visitor-id-display').textContent = 'Tracking Failed';
             }
         }
-
-        // --- Standard Portfolio Logic (Smooth Scrolling) ---
         
+        // --- Custom Portfolio Logic ---
+
+
+        // The button click handler is now simple, allowing the 'download' attribute to work.
+        document.getElementById('download-resume-btn').addEventListener('click', function(e) {
+            // No e.preventDefault() needed, the download attribute handles the action.
+            // If you wanted to log the download event to Firebase, you'd add tracking code here.
+        });
+
+
         // Smooth scrolling logic
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
 
+
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
 
+
                 if (targetElement) {
-                    const navHeight = 64; 
+                    const navHeight = 72; // Adjusted to match the fixed nav's height
                     const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
+
 
                     window.scrollTo({
                         top: offsetTop,
@@ -395,31 +446,43 @@
             });
         });
 
+
         // Highlight active link when scrolling
         const sections = document.querySelectorAll("main section");
         const navLinks = document.querySelectorAll(".nav-link");
+
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     navLinks.forEach(link => {
-                        link.classList.remove('accent-text');
+                        link.classList.remove('accent-text'); // Remove existing highlight
+                        link.classList.add('text-gray-400'); // Set default color
                         if (link.getAttribute('href') === `#${entry.target.id}`) {
-                            link.classList.add('accent-text');
+                            link.classList.add('accent-text'); // Apply highlight
+                            link.classList.remove('text-gray-400'); // Remove default color
                         }
                     });
                 }
             });
         }, { rootMargin: '-30% 0px -70% 0px' }); 
 
+
         sections.forEach(section => {
             observer.observe(section);
         });
         
-        // Start Firebase on page load to immediately record the click
-        window.onload = initFirebaseAndTrackVisit;
-
+        // Initialize Lucide icons and Firebase tracking
+        window.onload = () => {
+            lucide.createIcons();
+            if (Object.keys(firebaseConfig).length > 0) {
+                 initFirebaseAndTrackVisit();
+            } else {
+                 document.getElementById('visitor-id-display').textContent = 'Tracking Disabled (Local)';
+            }
+        };
     </script>
+
 
 </body>
 </html>
